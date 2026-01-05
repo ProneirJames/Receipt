@@ -1,5 +1,5 @@
 const CACHE_NAME = 'my-app-v1';
-const urlsToCache = ['/index.html', '/index.js'];
+const urlsToCache = ['/index.html', '/sign.png', '/jpps_logo.svg'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
