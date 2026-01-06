@@ -1,7 +1,7 @@
 {
   "name": "Receipt Manager",
   "short_name": "Receipt Manager",
-  "description": "A sample Progressive Web App manifest file.",
+  "description": "Temporary JPPS Receipt Manager",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
