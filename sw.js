@@ -1,16 +1,22 @@
-const CACHE_NAME = 'my-app-v1';
-const urlsToCache = ['/index.html', '/sign.png', '/jpps_logo.svg'];
+const CACHE_NAME = "pwa-cache-v1";
+const FILES_TO_CACHE = [
+  "/",
+  "/index.html",
+  "/jpps_logo.svg",
+  "/sw.js",
+  "/sign.png"
+];
 
-self.addEventListener('install', (event) => {
+self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(urlsToCache))
+    caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE))
   );
 });
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", event => {
   event.respondWith(
-    caches.match(event.request)
-      .then((response) => response || fetch(event.request))
+    caches.match(event.request).then(response => {
+      return response || fetch(event.request);
+    })
   );
 });
