@@ -2,7 +2,7 @@
   "name": "Receipt Manager",
   "short_name": "Receipt Manager",
   "description": "Temporary JPPS Receipt Manager",
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0b5ed7",
